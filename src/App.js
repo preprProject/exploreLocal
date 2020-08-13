@@ -1,26 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component, Fragment } from 'react';
 import './App.css';
 
-function App() {
+class App extends Component {
+  constructor(){
+    super()
+    this.state={
+      searchTerm:"",
+      location:"",
+      category:"",
+
+    }
+  }
+
+  render(){
+    let category=["shops", "resturants","hotels"]
   return (
-    <div className="App">
+    <Fragment>
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>Find local bussiness around you</h1>
+        <h2>support local and small bussiness recover from pandemic economic impact by reciving service at a local store</h2>
+        <form>
+          <label></label>
+          <input></input>
+          <label></label>
+          <input></input>
+          <label></label>
+          <input></input>
+        </form>
       </header>
-    </div>
-  );
+      </Fragment>
+  );}
 }
 
 export default App;
